@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;600&display=swap');
+body{
+    overflow-x: hidden;
+}
+
+
+nav{
+    height: 4rem;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    /*font-weight: 300;*/
+    transition: 0.2s ease-in-out;
+}
+.logo-img{
+    position: fixed;
+    width: 76.65px;
+    height: 59.1px;
+    left: 17px;
+    top: 13px;
+    
+    background: url(./images/benefica\ logo.png);
+    /* logo drop shadow */
+
+    filter: drop-shadow(0px 4px 4px rgba(129, 92, 92, 0.25));
+
+}
+
+
+.logo{
+    padding: 1vh 2vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-transform: none;
+    width: 25rem;
+    color: linear-gradient(93.71deg, #F16D92 0%, #F14374 98.71%);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+}
+
+h1{
+   font-family: 'Raleway', sans-serif;
+   /*color: linear-gradient(93.71deg, #F16D92 0%, #F14374 98.71%);*/
+   width: 215px;
+   height: 33px;
+   left: 94px;
+   top: 34px;
+   font-size: 28px;
+   line-height: 33px;
+   background: -webkit-linear-gradient(93.71deg, #F16D92 0%, #F14374 98.71%);
+   -webkit-background-clip: text;
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+ 
+}
+
+.nav-bar{
+    display: flex;
+    list-style: none;
+    width: 90vw;
+    padding-right: 2vw;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-bar li a{
+    text-decoration: none;
+    margin: 0 1.7vw;
+    /*color:linear-gradient(93.71deg, #F16D92 0%, #F14374 98.71%);*/
+    font-family: 'Raleway', sans-serif;
+    top: 37px;
+    color: black;
+}
+
+.nav-bar li{
+    position: relative;
+}
+
+.nav-bar li a,
+.nav-bar li a:after,
+.nav-bar li a:before{
+    transition: all .5s;
+}
+
+.nav-bar li a:hover{
+    color: black;
+}
+
+nav.nav li a:after{
+    position: absolute;
+    bottom: 20;
+    left: 0;
+    right: 10;
+    top: -10px;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #F16D92;
+    height: 1px;
+}
+
+nav.nav li a:hover:after{
+    width: 100%;
+}
+
+.home{
+    background-image: url(./images/organ\ donation.png);
+}
+
+.bg{
+    position: fixed;
+    width: 1500px;
+    height: 590px;
+    left: 0px;
+    top: 70px;
+    background: #F3C1DA;
+}
+
+.bg p{
+    position: absolute;
+    width: 542px;
+    height: 70px;
+    left: 805px;
+    top: 0px;
+
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+    background: -webkit-linear-gradient(93.71deg, #F16D92 0%, #F14374 98.71%);
+   -webkit-background-clip: text;
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+
+    text-shadow: 0px 4px 4px rgba(129, 92, 92, 0.25);
+}
+
+.bg .homepg{
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    right: 140px;
+    top: 190px;
+
+    background: #F4A0BC;
+    box-shadow: 0px 4px 10px 2px rgba(183, 175, 175, 0.25);
+    border-radius: 50px;
+}
+
+.bg .bgimg{
+    background: url(./images/organ\ donation.png);
+    position: fixed;
+    width: 800px;
+    height: 580px;
+    left: 0px;
+    top: 70px;
+    background-repeat: no-repeat;
+}
+
+.content{
+    padding: 20px;
+    width: 95%;
+    line-height: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    
+}
