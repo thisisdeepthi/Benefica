@@ -171,9 +171,12 @@ nav.nav #active{
 }
 
 .content{
-    padding: 20px;
+    padding-top: 25px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    padding-right: 30px;
     width: 95%;
-    line-height: 30px;
+    line-height: 28px;
     font-family: 'Raleway', sans-serif;
     font-style: italic;
     
