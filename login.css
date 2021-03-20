@@ -112,3 +112,80 @@ nav.nav #active{
     padding:9px;
     transition:all 0.15s ease-in-out;
 }
+
+.login{
+    position: fixed;
+    width: 450px;
+    height: 550px;
+    left: 500px;
+    top: 120px;
+
+    background: #F3C1DA;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 43px;
+}
+
+.button-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    border-radius: 30px;
+    box-shadow: 0 0 30px 10px rgba(197, 72, 113, 0.5);
+}
+
+.toggle-btn{
+    padding: 10px 32px 10px 34px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#btn{
+    top: 0;
+    left: 0;
+    position:absolute;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(93.71deg, #F16D92 0%, #F14374 98.71%);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.input{
+    top: 180px;
+    position: absolute;
+    /*width: 280px;*/
+    transition: .5s;
+    left: 70px;
+}
+
+.input-field{
+    width: 60%;
+    padding: 20px 30px;
+    margin: 10px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(93.71deg, #F16D92 0%, #F14374 98.71%);
+    border: 0;
+    outline: none;
+    height: 100%;
+    width: 40%;
+    left: 1021px;
+    top: 600px;
+    border-radius: 43px;
+    
+
+}
