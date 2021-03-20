@@ -159,12 +159,13 @@ nav.nav #active{
     /*width: 280px;*/
     transition: .5s;
     left: 70px;
+    
 }
 
 .input-field{
     width: 60%;
     padding: 20px 30px;
-    margin: 10px 0;
+    margin: 10px 10px 10px 0;
     border-left: 0;
     border-top: 0;
     border-right: 0;
@@ -183,9 +184,9 @@ nav.nav #active{
     outline: none;
     height: 100%;
     width: 40%;
-    left: 1021px;
+    left: 0;
     top: 600px;
     border-radius: 43px;
-    
-
+    text-align: center;
+    display: grid;
 }
