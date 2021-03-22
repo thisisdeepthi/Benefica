@@ -46,10 +46,26 @@
                     <button type="button" class="toggle-btn">Login</button>
                     <button type="button" class="toggle-btn">Register</button>
                 </div>
-                <form class="input">
+                <!-- <form class="input">
                     <input type="text" class="input-field" placeholder="Emailid" required>
                     <input type="text" class="input-field" placeholder="Password" required>
                     <button type="submit" class="submit-btn">Login</button>
+                </form> -->
+
+                <form action="" method="POST">
+                    <div class="form1">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input type="text" name="Emailid" class="input-field" placeholder="Emailid" required>
+                    </div>
+
+                    <div class="form2">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input type="password" name="password" class="input-field" placeholder="Password" required>
+                    </div>
+
+                    <div class="form3">
+                       <input type="submit" name="submit" class="btn" value="Login">
+                    </div>
                 </form>
             </div>
         </body>

@@ -123,23 +123,28 @@ nav.nav #active{
     background: #F3C1DA;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 43px;
+    /* font-family: 'Raleway', sans-serif; */
 }
 
 .button-box{
     width: 220px;
-    margin: 35px auto;
+    margin: 30px auto;
     position: relative;
     border-radius: 30px;
+    top: 25px;
+    left: 13px;
     box-shadow: 0 0 30px 10px rgba(197, 72, 113, 0.5);
 }
 
 .toggle-btn{
-    padding: 10px 32px 10px 34px;
+    padding: 10px 32px 10px 32px;
     cursor: pointer;
     background: transparent;
     border: 0;
     outline: none;
     position: relative;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
 }
 
 #btn{
@@ -153,10 +158,75 @@ nav.nav #active{
     transition: .5s;
 }
 
-.input{
+.form1{
+    top: 200px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+    left: 98px;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.form2{
+    top: 280px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+    left: 98px;
+}
+
+.form3{
+    top: 380px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+    left: 100px;
+}
+
+.input-field{
+    /* margin: auto;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    background: transparent;
+    display: block;
+    width: 90%; */
+
+    width: 90%;
+    overflow: hidden;
+    font-size: 18px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid black;
+    outline: none;
+    background: transparent;
+    font-family: 'Raleway', sans-serif;
+}
+
+.btn{
+    padding: 20px 60px;
+    cursor: pointer;
+    display: flex;
+    margin: auto;
+    background: linear-gradient(93.71deg, #F16D92 0%, #F14374 98.71%);
+    border: 0;
+    outline: none;
+    border-radius: 43px;
+    width: 60%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+
+/* .input{
     top: 180px;
     position: absolute;
-    /*width: 280px;*/
+    /*width: 280px;
     transition: .5s;
     left: 70px;
     
@@ -174,10 +244,12 @@ nav.nav #active{
     background: transparent;
 }
 
-.submit-btn{
+
+
+.btn .submit-btn{
     padding: 10px 30px;
     cursor: pointer;
-    display: block;
+    display: flex;
     margin: auto;
     background: linear-gradient(93.71deg, #F16D92 0%, #F14374 98.71%);
     border: 0;
@@ -189,4 +261,4 @@ nav.nav #active{
     border-radius: 43px;
     text-align: center;
     display: grid;
-}
+} */
