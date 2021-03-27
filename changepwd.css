@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;600&display=swap');
+body{
+    overflow-x: hidden;
+}
+
+
+nav{
+    height: 4rem;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    /*font-weight: 300;*/
+    transition: 0.2s ease-in-out;
+}
+.logo-img{
+    position: fixed;
+    width: 76.65px;
+    height: 59.1px;
+    left: 17px;
+    top: 13px;
+    
+    background: url(./images/benefica\ logo.png);
+    /* logo drop shadow */
+
+    filter: drop-shadow(0px 4px 4px rgba(129, 92, 92, 0.25));
+
+}
+
+
+.logo{
+    padding: 1vh 2vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-transform: none;
+    width: 25rem;
+    color: linear-gradient(93.71deg, #F16D92 0%, #F14374 98.71%);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+}
+
+h1{
+   font-family: 'Raleway', sans-serif;
+   /*color: linear-gradient(93.71deg, #F16D92 0%, #F14374 98.71%);*/
+   width: 215px;
+   height: 33px;
+   left: 94px;
+   top: 34px;
+   font-size: 28px;
+   line-height: 33px;
+   background: -webkit-linear-gradient(93.71deg, #F16D92 0%, #F14374 98.71%);
+   -webkit-background-clip: text;
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+ 
+}
+
+.nav-bar{
+    display: flex;
+    list-style: none;
+    width: 90vw;
+    padding-right: 2vw;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-bar li a{
+    text-decoration: none;
+    margin: 0 1.7vw;
+    /*color:linear-gradient(93.71deg, #F16D92 0%, #F14374 98.71%);*/
+    font-family: 'Raleway', sans-serif;
+    top: 37px;
+    color: black;
+}
+
+.nav-bar li{
+    position: relative;
+}
+
+.nav-bar li a,
+.nav-bar li a:after,
+.nav-bar li a:before{
+    transition: all .5s;
+}
+
+.nav-bar li a:hover{
+    color: black;
+}
+
+nav.nav .others a:after{
+    position: absolute;
+    bottom: 20;
+    left: 0;
+    right: 10;
+    top: -10px;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #F16D92;
+    height: 1px;
+}
+
+nav.nav .others a:hover:after{
+    width: 100%;
+}
+
+nav.nav #active{
+    border-top:1px solid #F16D92;
+    padding:9px;
+    transition:all 0.15s ease-in-out;
+}
+
+.dropdown{
+    position: relative;
+    display: flex;
+}
+
+.dropbtn{
+    text-decoration: none;
+    margin: 0 1.7vw;
+    /*color:linear-gradient(93.71deg, #F16D92 0%, #F14374 98.71%);*/
+    font-family: 'Raleway', sans-serif;
+    top: 37px;
+    color: black;
+    border: none;
+    background-color: white;
+    font-size: 18px;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+    top: 100%;
+}
+
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover 
+{
+    background-color:#F16D92;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: none;
+}

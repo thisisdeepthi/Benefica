@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="search.css">
+        <link rel="stylesheet" type="text/css" href="home.css">
         <title>Benefica</title>
         <link rel="icon" href="D:\xampp\htdocs\OSS\images\benefica logo.png" type="image/png" sizes="152x152">
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,18 +29,24 @@
                         </div>-->
                         
                         <ul class="nav-bar">
-                            <li class="others" onmouseover="removeline()" onmouseout="setline()"><a href="index.html" id="home"><i class="fa fa-home"></i> Home</a></li>
-                            <li class="others" onmouseover="removeline()" onmouseout="setline()"><a href="login.html" id="login"><i class="fa fa-user"></i> Login</a></li>
-                            <li id="active"><a href="#" id="search"><i class="fa fa-search"></i> Search</a></li>
+                            <li class="others" onmouseover="removeline()" onmouseout="setline()"><a href="home.html" id="home"><i class="fa fa-home"></i> Home</a></li>
+                            <li id="active"><a href="search.html" id="search"><i class="fa fa-search"></i> Search</a></li>
                             <li class="others" onmouseover="removeline()" onmouseout="setline()" style="background: -webkit-linear-gradient(93.71deg, #F16D92 0%, #F14374 98.71%);
                             -webkit-background-clip: text;
                             background-clip: text;
                             -webkit-text-fill-color: transparent"><a href="donor.html" id="become a donor"><i class="fa fa-plus-square"></i> Become a donor</a></li>
-                            
+                            <!-- <li class="others" onmouseover="removeline()" onmouseout="setline()"><a href="index.html" id="logout"><i class="fa fa-user"></i> Logout</a></li>
+                            <li class="others" onmouseover="removeline()" onmouseout="setline()"><a href="changepwd.html" id="changepwd"><i class="fa fa-lock"></i> Change Password</a></li> -->
+                            <div class="dropdown">
+                                <li class="others" onmouseover="removeline()" onmouseout="setline()"><button class="dropbtn"><i class="fa fa-cog"></i> Settings</button></li>
+                                <div class="dropdown-content">
+                                  <a href="index.html" id="logout"><i class="fa fa-user"></i> Logout</a>
+                                  <a href="changepwd.html" id="changepwd"><i class="fa fa-lock"></i> Change Password</a>
+                                </div>
+                              </div> 
                         </ul>
                 </nav>
             </header>
-            
         </body>
     </head>
 </html>
