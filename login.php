@@ -9,7 +9,7 @@ if(isset($_POST['login']))
 
    $pass = md5($pwd);
    
-   $sql = "SELECT * FROM user WHERE Email ='".$email."' AND Password = '".$pass."'";
+   $sql = "SELECT * FROM user_table WHERE Email ='".$email."' AND Password = '".$pass."'";
 
    $res = mysqli_query($conn,$sql);
 

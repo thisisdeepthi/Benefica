@@ -16,9 +16,9 @@ if(isset($_POST['submit']))
         window.location='register.html';
         </script>";
     }
-    $sql_e = "SELECT * FROM user WHERE Email = '$email'";
+    $sql_e = "SELECT * FROM user_table WHERE Email = '$email'";
     $res_e = mysqli_query($conn,$sql_e);
-    $sql_p = "SELECT * FROM user WHERE Password = '".md5($pwd)."'";
+    $sql_p = "SELECT * FROM user_table WHERE Password = '".md5($pwd)."'";
     $res_p = mysqli_query($conn,$sql_p);
     
     if(mysqli_num_rows($res_e) > 0){
@@ -33,7 +33,7 @@ if(isset($_POST['submit']))
     }
     else{
         $pass = md5($pwd);//for encrypting
-        $sql = "INSERT INTO user (Name , Email , Password) values ('$name','$email' , '$pass')";
+        $sql = "INSERT INTO user_table (Name , Email , Password) values ('$name','$email' , '$pass')";
         $res= mysqli_query($conn,$sql);
 
         if($res){

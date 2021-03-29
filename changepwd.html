@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="home.css">
+        <link rel="stylesheet" type="text/css" href="changepwd.css?v= <?php echo time(); ?>">
         <title>Benefica</title>
         <link rel="icon" href="D:\xampp\htdocs\OSS\images\benefica logo.png" type="image/png" sizes="152x152">
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -47,6 +47,32 @@
                         </ul>
                 </nav>
             </header>
+            <div class="cpwd">
+                <h2>Change Password</h2>
+                <form action="changepwd.php" method="POST">
+                    <div class="form1">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <input type="email" name="email" class="input-field" placeholder="Emailid" required/>
+                    </div>
+                    <div class="form2">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input type="password" name="oldpwd" class="input-field" placeholder="Old Password" required/>
+                    </div>
+                    <div class="form3">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input type="password" name="newpwd" class="input-field" placeholder="New Password" required/>
+                    </div>
+
+                    <div class="form4">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input type="password" name="confirmpwd" class="input-field" placeholder="Confirm Password" required/>
+                    </div>
+
+                    <div class="form5">
+                       <input type="submit" name="cpwd" class="btn" value="Change Password"/>
+                    </div>
+                </form>
+            </div>
         </body>
     </head>
 </html>
