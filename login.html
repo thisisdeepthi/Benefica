@@ -15,6 +15,23 @@
                 document.getElementById("active").style.borderTop="1px solid #F16D92";
             }
         </script>
+        <script type="text/javascript">
+
+            function Alertmsg(){
+                var res = confirm("Login/Register first to become a donor!");
+                if(res){
+                    window.location="login.html";
+                }
+            }
+
+            function Alertmsg1(){
+               var result = confirm("Login/Register first to search for an organ!");
+                if(result){
+                    window.location="login.html";
+                }
+            }
+       
+       </script>
         <body>
             <header>
                 <nav class="nav" id="navbar">
@@ -31,11 +48,11 @@
                         <ul class="nav-bar">
                             <li class="others" onmouseover="removeline()" onmouseout="setline()"><a href="index.html" id="home"><i class="fa fa-home"></i> Home</a></li>
                             <li id="active"><a href="#" id="login"><i class="fa fa-user"></i> Login</a></li>
-                            <li class="others" onmouseover="removeline()" onmouseout="setline()"><a href="search.html" id="search"><i class="fa fa-search"></i> Search</a></li>
+                            <li class="others" onmouseover="removeline()" onmouseout="setline()"><a href="javascript:Alertmsg1();" id="search"><i class="fa fa-search"></i> Search</a></li>
                             <li class="others" onmouseover="removeline()" onmouseout="setline()" style="background: -webkit-linear-gradient(93.71deg, #F16D92 0%, #F14374 98.71%);
                             -webkit-background-clip: text;
                             background-clip: text;
-                            -webkit-text-fill-color: transparent"><a href="donor.html" id="become a donor"><i class="fa fa-plus-square"></i> Become a donor</a></li>
+                            -webkit-text-fill-color: transparent"><a href="javascript:Alertmsg();" id="become a donor"><i class="fa fa-plus-square"></i> Become a donor</a></li>
                             
                         </ul>
                 </nav>

@@ -133,7 +133,7 @@ nav.nav #active{
 .dropdown-content{
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: transparent;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 2;
@@ -163,3 +163,35 @@ nav.nav #active{
 .dropdown:hover .dropbtn {
   background-color: none;
 }
+
+.bg{
+    position: fixed;
+    width: 1500px;
+    height: 590px;
+    left: 0px;
+    top: 70px;
+    background: #ddd2e3;
+}
+
+.bgimg{
+    background: url(./images/bg1.jpg);
+    position: fixed;
+    width: 1900px;
+    height: 590px;
+    left: 0px;
+    top: 70px;
+    background-repeat: no-repeat;
+}
+
+.donor{
+    position: fixed;
+    width: 450px;
+    height: 550px;
+    left: 960px;
+    top: 100px;
+
+    background: transparent;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 43px;
+    
+} 
