@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="donor.css">
+        <link rel="stylesheet" type="text/css" href="donor.css?v= <?php echo time(); ?">
         <title>Benefica</title>
         <link rel="icon" href="D:\xampp\htdocs\OSS\images\benefica logo.png" type="image/png" sizes="152x152">
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,6 +14,45 @@
             function setline(){
                 document.getElementById("active").style.borderTop="1px solid #F16D92";
             }
+            document.addEventListener("DOMContentLoaded", function () {
+    const separator = ',';
+    for (const input of document.getElementsByTagName("input")) {
+        if (!input.multiple) {
+            continue;
+        }
+        if (input.list instanceof HTMLDataListElement) {
+            const optionsValues = Array.from(input.list.options).map(opt => opt.value);
+            let valueCount = input.value.split(separator).length;
+            input.addEventListener("input", () => {
+                const currentValueCount = input.value.split(separator).length;
+                // Do not update list if the user doesn't add/remove a separator
+                // Current value: "a, b, c"; New value: "a, b, cd" => Do not change the list
+                // Current value: "a, b, c"; New value: "a, b, c," => Update the list
+                // Current value: "a, b, c"; New value: "a, b" => Update the list
+                if (valueCount !== currentValueCount) {
+                    const lsIndex = input.value.lastIndexOf(separator);
+                    const str = lsIndex !== -1 ? input.value.substr(0, lsIndex) + separator : "";
+                    filldatalist(input, optionsValues, str);
+                    valueCount = currentValueCount;
+                }
+            });
+        }
+    }
+    function filldatalist(input, optionValues, optionPrefix) {
+        const list = input.list;
+        if (list && optionValues.length > 0) {
+            list.innerHTML = "";
+            const usedOptions = optionPrefix.split(separator).map(value => value.trim());
+            for (const optionsValue of optionValues) {
+                if (usedOptions.indexOf(optionsValue) < 0) {
+                    const option = document.createElement("option");
+                    option.value = optionPrefix + optionsValue;
+                    list.append(option);
+                }
+            }
+        }
+    }
+});
         </script>
         <body>
             <header>
@@ -50,7 +89,117 @@
             <div class="bg">
                 <div class="bgimg">
                     <div class="donor">
-    
+                        <h3>Donor Registration form</h3>
+                        <form action="" method="POST">
+                            <p>First Name</p>
+                            <input type="name" name="fname" class="input-field" required/>
+                            <p>Last Name</p>
+                            <input type="name" name="lname" class="input-field" required>
+                            <p>Date of Birth</p>
+                            <input type="date" name="dob" class="input-field" required>
+                            <p>Gender</p>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label><br>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label><br>
+                            <input type="radio" id="other" name="gender" value="other">
+                            <label for="other">Other</label><br>
+                            <p>Address</p>
+                            <input type="text" name="address" class="input-field" required>
+                            <p>City</p>
+                            <input type="text" name="city" class="input-field" required>
+                            <p>State</p>
+                            <input type="text" name="state" class="input-field" required>
+                            <p>Pincode</p>
+                            <input type="number" name="pincode" class="input-field" maxlength="6" required>
+                            <p>Blood Group</p>
+                            <input type="text" name="bloodgrp" list="blood" class="input-field" required/>
+                            <datalist id="blood">
+                                <option>A Positive</option>
+                                <option>A Negative</option>
+                                <option>B Positive</option>
+                                <option>B Negative</option>
+                                <option>AB Positive</option>
+                                <option>AB Negative</option>
+                                <option>O Positive</option>
+                                <option>O Negative</option>
+                            </datalist>
+                            <p>Organs wishing to donate</p>
+                            <input type="text" list="organ" name="organs" class="input-field" multiple="multiple" required/>
+                            <datalist id="organ">
+                                <option>Liver</option>
+                                <option>Lung</option>
+                                <option>Kidney</option>
+                                <option>Pancreas</option>
+                                <option>Intestine</option>
+                            </datalist>
+                            <small>Enter comma(,) to add organs</small>
+
+                            <div class="form1">
+                                <input type="submit" name="submit" class="btn" value="Become a Donor">
+                            </div>
+                            
+
+                            <!-- <label for="fname" class="label1">First Name</label>
+                            <div class="form1">
+                                
+                                <input type="name" id="fname" name="email" class="input-field" required/>
+                            </div>
+
+
+                            <label for="lname" class="label2">Last Name</label>
+                            <div class="form2">
+                                
+                                <input type="name" id="lname" name="name" class="input-field" required/>
+                            </div>
+        
+                            <div class="form3">
+                                <label for="dob">Date of Birth</label>
+                                <input type="date" id="dob" name="dob" class="input-field" required/>
+                            </div>
+        
+                            <div class="form4">
+                                <label for="blood">Blood Group</label>
+                                <input type="text" list="blood"/>
+                                <datalist id="blood">
+                                    <option>A Positive</option>
+                                    <option>A Negative</option>
+                                    <option>B Positive</option>
+                                    <option>B Negative</option>
+                                    <option>AB Positive</option>
+                                    <option>AB Negative</option>
+                                    <option>O Positive</option>
+                                    <option>O Negative</option>
+                                </datalist>
+                            </div>
+        
+                            <div class="form5">
+                                <label for="add">Address</label>
+                                <input type="text" id="add" name="address" class="input-field"/>
+                            </div>
+
+                            <div class="form6">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" class="input-field"/>
+                            </div>
+
+                            <div class="form7">
+                                <label for="phn">Phone number</label>
+                                <input type="text" id="phn" name="phone" class="input-field" pattern="[1-9]{1}[0-9]{9}" maxlength="10"/>
+                            </div>
+
+                            <div class="form8">
+                                <label for="organ">Organs wishing to donate</label>
+                                <input type="text" list="organ"/>
+                                <datalist id="organ">
+                                    <option>Liver</option>
+                                    <option>Lung</option>
+                                    <option>Kidney</option>
+                                    <option>Pancreas</option>
+                                    <option>Intestine</option>
+                                </datalist>
+                            </div> -->
+                        </form>
                     </div>
                 </div>
             </div>
