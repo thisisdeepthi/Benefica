@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="home.css">
+        <link rel="stylesheet" type="text/css" href="search.css?v= <?php echo time(); ?">
         <title>Benefica</title>
         <link rel="icon" href="D:\xampp\htdocs\OSS\images\benefica logo.png" type="image/png" sizes="152x152">
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -47,6 +47,40 @@
                         </ul>
                 </nav>
             </header>
+            <div class="bg">
+                <div class="bgimg">
+                    <div class="search">
+                        <h3>Search for an organ</h3>
+                        <form action="search.php" method="POST">
+                            <p>Organ name</p>
+                            <input type="text" list="organ" name="organs" class="input-field" required/>
+                            <datalist id="organ">
+                                <option>Liver</option>
+                                <option>Lung</option>
+                                <option>Kidney</option>
+                                <option>Pancreas</option>
+                                <option>Intestine</option>
+                            </datalist>
+                            <p>Blood Group</p>
+                            <input type="text" name="bloodgrp" list="blood" class="input-field" required/>
+                            <datalist id="blood">
+                                <option>A Positive</option>
+                                <option>A Negative</option>
+                                <option>B Positive</option>
+                                <option>B Negative</option>
+                                <option>AB Positive</option>
+                                <option>AB Negative</option>
+                                <option>O Positive</option>
+                                <option>O Negative</option>
+                            </datalist>
+
+                            <div class="form1">
+                                <input type="submit" name="submit" class="btn" value="Search for an organ">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </body>
     </head>
 </html>

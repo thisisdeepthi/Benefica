@@ -114,6 +114,8 @@
                             <input type="text" name="state" class="input-field" required>
                             <p>Pincode</p>
                             <input type="number" name="pincode" class="input-field" maxlength="6" required>
+                            <p>Mobile Number</p>
+                            <input type="number" name="phn" class="input-field" maxlength="10" required>
                             <p>Weight</p>
                             <input type="number" name="weight" class="input-field" required/>
                             <p>Blood Group</p>
@@ -129,12 +131,12 @@
                                 <option>O Negative</option>
                             </datalist>
                             <p>Do you have diabetes, heart, lung or kidney disease?</p>
-                            <input type="radio" id="yes" name="yes" value="yes">
+                            <input type="radio" id="yes" name="disease" value="yes">
                             <label for="yes">Yes</label><br>
-                            <input type="radio" id="no" name="no" value="no">
+                            <input type="radio" id="no" name="disease" value="no">
                             <label for="no">No</label><br> 
                             <p>Organs wishing to donate</p>
-                            <input type="text" list="organ" name="organs" class="input-field" multiple="multiple" required/>
+                            <input type="text" list="organ" name="organs[]" class="input-field" multiple="multiple" required/>
                             <datalist id="organ">
                                 <option>Liver</option>
                                 <option>Lung</option>

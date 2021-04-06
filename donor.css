@@ -244,7 +244,7 @@ label{
     cursor: pointer;
     display: flex;
     margin: auto;
-    background: #9b60bc;
+    background: rgb(169, 92, 92);
     border: 0;
     outline: none;
     border-radius: 43px;
