@@ -18,6 +18,9 @@ if(isset($_POST['submit']))
     $bloodgrp = mysqli_real_escape_string($conn,$_POST['bloodgrp']);
     $disease = mysqli_real_escape_string($conn,$_POST['disease']);
     $organs = $_POST['organs'];
+    $organs_arr = explode(',',$organs[0]);
+    //print_r($organs_arr);
+    
     $no = "no";
 
     function age($dob){
@@ -35,20 +38,25 @@ if(isset($_POST['submit']))
     // echo ($age >= 18 || $age<=60);
     // echo $disease;echo $no;
     
-    if(($age >= 18 || $age<=60) && ($disease == $no)){
-            foreach($organs as $organ){
-                $neworgan = $organ;
-                $query = "INSERT INTO donor_table (`First Name`,`Last Name`,Email,Dob,Age,Gender,Address,City,State,Pincode,`Phone number`,Weight,`Blood Group`,Disease,Organs) VALUES ('$fname' , '$lname' , '$email' , '$dob' , '$age' ,'$gender' , '$address' , '$city' , '$state' , '$pincode' , '$phn' , '$weight' , '$bloodgrp' , '$disease' , '$neworgan') ";
-                $res= mysqli_query($conn,$query);
+    if(($age >= 18 || $age<=60) && ($disease == $no))
+    {
+        foreach($organs_arr as $organ)
+        {
+            $neworgan = $organ;
+            echo $organ;
+            echo $neworgan;
+            $query = "INSERT INTO donor_table (`First Name`,`Last Name`,Email,Dob,Age,Gender,Address,City,State,Pincode,`Phone number`,Weight,`Blood Group`,Disease,Organs) VALUES ('$fname' , '$lname' , '$email' , '$dob' , '$age' ,'$gender' , '$address' , '$city' , '$state' , '$pincode' , '$phn' , '$weight' , '$bloodgrp' , '$disease' , '$neworgan') ";
+            $res= mysqli_query($conn,$query);
 
-                if($res){
-                   echo "<script type='text/javascript'>alert('You are a donor now!');
-                   window.location='home.html';
-                   </script>";
-                }
+            if($res)
+            {
+                echo "<script type='text/javascript'>alert('You are a donor now!');
+                window.location='home.html';
+                </script>";
             }
-        
+        }
     }
+
     else
     {
         echo "<script type='text/javascript'>alert('Age should be between 18 and 60 and also you should not suffer from any disease!');
