@@ -133,7 +133,7 @@ nav.nav #active{
 .dropdown-content{
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: transparent;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 2;
@@ -188,7 +188,7 @@ nav.nav #active{
     width: 430px;
     height: 300px;
     left: 940px;
-    top: 90px;
+    top: 150px;
     padding: 30px;
     background: #c9b8d3;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
