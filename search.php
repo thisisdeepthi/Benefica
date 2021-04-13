@@ -1,3 +1,32 @@
+<html>
+<head>
+<title>Searched records</title>
+<style type="text/css">
+table{
+    border-collapse:collapse;
+    text-align:center;
+    width:60%;
+    height:20%;
+    /* margin:2px auto; */
+    margin-left:auto;
+    margin-right:auto;
+    font-size:16px;
+}
+tr{
+    align:center;
+}
+th{
+    border:1px solid #333;
+    align:center;
+
+}
+td{
+    border:1px solid #333;
+    align:center;
+}
+</style>
+</head>
+<body>
 <?php
 
 require('config.php');
@@ -23,20 +52,20 @@ if(isset($_POST['submit']))
 
     if (mysqli_num_rows($result) > 0)
     {
-        echo "<table border = '2' align = 'center' width = '60%' height = '20%' margin = '0px auto'>";
-           echo "<tr align = 'center'>";
-             echo "<th align = 'center'>First Name</th>";
-             echo "<th align = 'center'>Email Id</th>";
-             echo "<th align = 'center'>City</th>";
-             echo "<th align = 'center'>Phone number</th>";
+        echo "<table>";
+           echo "<tr>";
+             echo "<th>First Name</th>";
+             echo "<th>Email Id</th>";
+             echo "<th>City</th>";
+             echo "<th>Phone number</th>";
            echo "</tr>";
         while($row = mysqli_fetch_assoc($result))
         {
             echo "<tr>";
-               echo "<td align = 'center'>" . $row['First Name'] . "</td>";
-               echo "<td align = 'center'>" . $row['Email'] . "</td>";
-               echo "<td align = 'center'>" . $row['City'] . "</td>";
-               echo "<td align = 'center'>" . $row['Phone number'] . "</td>";
+               echo "<td>" . $row['First Name'] . "</td>";
+               echo "<td>" . $row['Email'] . "</td>";
+               echo "<td>" . $row['City'] . "</td>";
+               echo "<td>" . $row['Phone number'] . "</td>";
             echo "</tr>";
         }
         echo "</table>";
@@ -48,3 +77,5 @@ if(isset($_POST['submit']))
 }
 
 ?>
+</body>
+</html>
