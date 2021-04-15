@@ -44,43 +44,4 @@ if(isset($_POST['submit']))
     }
 }
 
-
-// $name = filter_input(INPUT_POST , 'name');
-// $email = filter_input(INPUT_POST,'email');
-// $pwd = filter_input(INPUT_POST,'password');
-// $cpwd = filter_input(INPUT_POST,'cpassword');
-
-// if(!empty($email)){
-//     if(!empty($name)){
-//         if(!empty($pwd)){
-//         if(!empty($cpwd)){
-
-//             $host = "localhost:8111";
-//             $dbuser = "root";
-//             $dbpwd = "";
-//             $dbname = "testdb";
-
-//             //create connection
-//             $conn = new mysqli($host,$dbuser,$dbpwd,$dbname);
-
-//             if(mysqli_connect_error()){
-//                 die('Connect error (' . mysqli_connect_error() . ')' . mysqli_connect_error());
-
-//             }
-//             else{
-//                 $sql = "INSERT INTO reg_table (name , email , password) values ('$name','$email' , '$pwd')";
-//                 if($conn->query($sql)){
-//                     header('location:login.html');
-//                     echo '<script> alert("Registered Successfully!")</script>';
-//                 }
-//                 else{
-//                     echo "Error: " . $sql . "<br>" . $conn->error;
-//                 }
-//                 $conn->close();
-//             }
-//             }
-//         }
-//     }
-// }
-
 ?>
